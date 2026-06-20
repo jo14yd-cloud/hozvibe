@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Косметика</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+    margin:0;
+}
+
+header{
+    background:#1e88e5;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.back{
+    display:inline-block;
+    margin:20px;
+    padding:10px 15px;
+    background:#1e88e5;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.product{
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.price{
+    color:green;
+    font-size:20px;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>💄 Косметика</h1>
+</header>
+
+<a href="index.html" class="back">← Назад</a>
+
+<div class="products">
+
+    <div class="product">
+        <h3>Тональный крем Maybelline</h3>
+        <p class="price">650 сом</p>
+    </div>
+
+    <div class="product">
+        <h3>Тушь L'Oréal Paris</h3>
+        <p class="price">550 сом</p>
+    </div>
+
+    <div class="product">
+        <h3>Пудра Max Factor</h3>
+        <p class="price">720 сом</p>
+    </div>
+
+    <div class="product">
+        <h3>Помада NYX</h3>
+        <p class="price">480 сом</p>
+    </div>
+
+    <div class="product">
+        <h3>Карандаш для глаз Essence</h3>
+        <p class="price">250 сом</p>
+    </div>
+
+    <div class="product">
+        <h3>Румяна Eveline</h3>
+        <p class="price">390 сом</p>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Магазин бытовой химии</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+header{
+    background:#1e88e5;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.cart{
+    background:white;
+    color:#1e88e5;
+    padding:10px 15px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.search-box{
+    padding:20px;
+    text-align:center;
+}
+
+.search-box input{
+    width:80%;
+    max-width:600px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+h2{
+    padding:20px;
+}
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    padding:20px;
+}
+
+.category{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+    cursor:pointer;
+}
+
+.category:hover{
+    background:#1e88e5;
+    color:white;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.product{
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.product img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.product h3{
+    margin:10px 0;
+}
+
+.price{
+    color:green;
+    font-size:20px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+button{
+    background:#1e88e5;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+.category{
+    text-decoration:none;
+    color:#333;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">🛒 HOZVIBE</div>
+    <div class="cart">Корзина: <span id="cartCount">0</span></div>
+</header>
+
+<div class="search-box">
+    <input type="text" placeholder="Поиск товаров...">
+</div>
+
+<h2>Категории</h2>
+
+<section class="categories">
+    <a href="milo.html" class="category">🧼 Мыло</a>
+
+<a href="shampuni.html" class="category">🧴 Шампуни</a>
+
+<a href="poroshki.html" class="category">🧺 Стиральные порошки</a>
+
+<a href="parfumeriya.html" class="category">🌸 Парфюмерия</a>
+
+<a href="uborka.html" class="category">🧽 Средства для уборки</a>
+
+<a href="posuda.html" class="category">🍽️ Средства для мытья посуды</a>
+
+<a href="bumaga.html" class="category">🧻 Бумажная продукция</a>
+
+<a href="pasta.html" class="category">🦷 Зубные пасты</a>
+
+<a href="shetki.html" class="category">🪥 Зубные щётки</a>
+
+<a href="dush.html" class="category">🧴 Гели для душа</a>
+
+<a href="volosy.html" class="category">🧴 Кондиционеры для волос</a>
+
+<a href="kosmetika.html" class="category">💄 Косметика</a>
+
+<a href="britvy.html" class="category">🪒 Бритвы и лезвия</a>
+
+<a href="deti.html" class="category">👶 Детская гигиена</a>
+
+<a href="dom.html" class="category">🩹 Товары для дома</a>
+
+<a href="vozduh.html" class="category">🕯️ Освежители воздуха</a>
+
+<a href="nasekomye.html" class="category">🦟 Средства от насекомых</a>
+
+<a href="tualet.html" class="category">🚽 Средства для туалета</a>
+
+<a href="perchatki.html" class="category">🧤 Перчатки</a>
+
+<a href="akcii.html" class="category">📦 Акции и скидки</a>
+</section>
+
+
+<h2>Популярные товары</h2>
+
+<section class="products">
+
+    <div class="product">
+        <img src="https://avatars.mds.yandex.net/get-mpic/1681399/2a000001932f42845bf19a79b57845cc8d71/orig/300x180" alt="">
+        <h3>Мыло Dove</h3>
+        <div class="price">120 сом</div>
+        <button onclick="addToCart()">В корзину</button>
+    </div>
+
+    <div class="product">
+        <img src="https://ir.ozone.ru/s3/multimedia-1-q/7207279874.jpg/300x180" alt="">
+        <h3>Шампунь Head & Shoulders</h3>
+        <div class="price">350 сом</div>
+        <button onclick="addToCart()">В корзину</button>
+    </div>
+
+    <div class="product">
+        <img src="https://main-cdn.sbermegamarket.ru/big1/hlr-system/-47/391/226/383/016/53/100037695527b0.jpg/300x180" alt="">
+        <h3>Ariel 3 кг</h3>
+        <div class="price">690 сом</div>
+        <button onclick="addToCart()">В корзину</button>
+    </div>
+
+    <div class="product">
+        <img src="https://cdn1.ozone.ru/s3/multimedia-v/c600/6109376959.jpg/300x180" alt="">
+        <h3>Fairy 900 мл</h3>
+        <div class="price">250 сом</div>
+        <button onclick="addToCart()">В корзину</button>
+    </div>
+
+</section>
+
+<footer>
+    <h3>Контакты</h3>
+    <p>📞 +996222666226</p>
+    <p>📍 OШ</p>
+    <p>© 2026 Все права защищены</p>
+</footer>
+
+<script>
+let cart = 0;
+
+function addToCart(){
+    cart++;
+    document.getElementById("cartCount").innerText = cart;
+}
+</script>
+
+</body>
+</html>

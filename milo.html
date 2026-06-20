@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мыло - Магазин бытовой химии</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #1e88e5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+        }
+
+        .price {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #1e88e5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Мыло - Магазин</h1>
+</header>
+
+<section class="products">
+    <div class="product">
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h3>Мыло Dove</h3>
+        <div class="price">120 сом</div>
+        <button>В корзину</button>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h3>Мыло Lux</h3>
+        <div class="price">100 сом</div>
+        <button>В корзину</button>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h3>Мыло Nivea</h3>
+        <div class="price">150 сом</div>
+        <button>В корзину</button>
+    </div>
+</section>
+
+<footer>
+    <h3>Контакты</h3>
+    <p>📞 +996 XXX XXX XXX</p>
+    <p>📍 Бишкек</p>
+    <
